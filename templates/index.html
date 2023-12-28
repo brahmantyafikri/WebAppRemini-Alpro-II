@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h2 class="logo"> REMINI </h2>
+        <nav class="navigation">
+            <a href="{{ url_for('index') }}" class="active">Home<span></span></a>
+            <a href="{{ url_for('about') }}">About <span></span></a>
+            <a href="{{ url_for('recipe') }}">Service<span></span></a>
+        </nav>
+    </header>
+
+    <div class="paralax">
+        <img src="static/img/stars.png" id="stars">
+        <img src="static/img/bgrok.png" id="meteorid">
+        <img src="static/img/rok.png" id="rocket">
+        <h1 id="text">Recipe Mining</h1>
+        <a href="{{ url_for('recipe') }}" id="button">Recipe</a>
+    </div>
+
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #585858;">
+          © 2023 Copyright:
+          <a class="text-body" href="https://github.com/OkkaOmarrosi/alpro-2023-kelompok1">Kelompok 1</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <script src="static/script.js"></script>
+
+
+</body>
+</html>

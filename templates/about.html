@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/about.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>About Us - REMINI</title>
+</head>
+<body>
+
+    <header>
+        <h2 class="logo">REMINI</h2>
+        <nav class="navigation">
+            <a href="{{ url_for('index') }}" >Home<span></span></a>
+            <a href="{{ url_for('about') }}"class="active">About <span></span></a>
+            <a href="{{ url_for('recipe') }}">Service<span></span></a>
+        </nav>
+    </header>
+
+    <div class="carousel-container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/bg/1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="static/bg/2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="static/bg/3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    
+
+    <section class="about-section">
+        <div class="about-content">
+            <img src="static/img/bg.png" alt="About Us">
+            <div class="about-text">
+                <h2>Latar Belakang</h2>
+                <p>Pengembangan sistem Expert System dan Machine Learning dalam menyajikan resep makanan merespons keberagaman kuliner dan permintaan panduan kuliner personal. Dengan memanfaatkan pengetahuan ahli kuliner dan data pengguna, sistem memberikan rekomendasi terpersonalisasi. Machine Learning memperbarui pengetahuannya berdasarkan umpan balik pengguna, tren kuliner, dan variasi bahan makanan. Sistem dirancang memperhitungkan preferensi diet, alergi, dan waktu memasak, memberikan rekomendasi sesuai kebutuhan kesehatan dan gaya hidup. Solusi ini penting dalam memberikan pengalaman memasak yang menyenangkan, efisien, dan sesuai dengan keberagaman selera.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h3>Anggota Kami</h3><br>
+        <div class="team-members">
+            <div class="team-card">
+                <img src="static/bg/kece.jpeg" alt="Team Member 1">
+                <h4>Andi Rafi Fajar Wally</h4>
+            </div>
+    
+            <div class="team-card">
+                <img src="static/bg/fikri2.png" alt="Team Member 2"><br>
+                <h4>Brahmantya Fikri Setya P.</h4>
+            </div>
+    
+            <div class="team-card">
+                <img src="static/bg/okka.JPG" alt="Team Member 3"><br>
+                <h4>Moh. Okka Omarrosi</h4>
+            </div>
+    
+            <div class="team-card">
+                <img src="static/bg/rein.jpeg" alt="Team Member 4"><br>
+                <h4>Reinhart Ananda Siswadi</h4>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="functions-section">
+        <div class="functions-content">
+            <img src="static/img/brug.png" alt="Fungsi Utama" class="function-image">
+            <div class="content-text">
+                <h2>Fungsi Utama</h2>
+                <p>Sistem ini berfungsi untuk membantu orang-orang dalam mengetahui resep-resep makanan yang sesuai dengan keinginan pengguna. Pengguna akan menginputkan bahan makanan, negara asal makanan, preferensi rasa, waktu persiapan, dan jumlah porsi. Setelah pengguna menginputkan data, akan muncul rekomendasi makanan berdasarkan data yang diinputkan. Setelah pengguna memilih salah satu resep, akan muncul bahan-bahan yang diperlukan, langkah-langkah pembuatan beserta detail lain dari makanan tersebut. Rekomendasi makanan lain yang mirip juga akan muncul.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #FFBE33;">
+          © 2023 Copyright:
+          <a class="text-body" href="https://github.com/OkkaOmarrosi/alpro-2023-kelompok1">Kelompok 1</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <script src="static/script.js"></script>
+    <!-- Bootstrap JavaScript and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

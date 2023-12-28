@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommender</title>
+    <link rel="stylesheet" href="static/recipe.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h2 class="logo">REMINI</h2>
+        <nav class="navigation">
+            <a href="{{ url_for('index') }}" >Home<span></span></a>
+            <a href="{{ url_for('about') }}">About <span></span></a>
+            <a href="{{ url_for('recipe') }}" class="active">Service<span></span></a>
+        </nav>
+    </header>
+
+    <div class="carousel-container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/bg/1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="static/bg/2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="static/bg/3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h1 style="text-align: center;">Recipe Recommendations</h1>
+        <form action="/recommend" method="post">
+            <div class="mb-3">
+                <label for="owned_ingredients">Owned Ingredients (comma-separated):</label>
+                <input type="text" name="owned_ingredients" required placeholder="Enter your ingredients"><br>
+            </div>
+    
+            <div class="mb-3">
+                <label for="diet">Diet:</label>
+                <select name="diet">
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Sugar Free">Sugar Free</option>
+                        <option value="Non Vegeterian">Non Vegeterian</option>
+                        <option value="High Protein Vegetarian">High Protein Vegetarian</option>
+                        <option value="Eggetarian">Eggetarian</option>
+                        <option value="Diabetic Friendly">Diabetic Friendly</option>
+                        <option value="Random">Random</option>
+                </select>
+            </div>
+    
+            <div class="mb-3">
+                <label for="course">Course:</label>
+                <select name="course">
+                    <option value="Appetizer">Appetizer</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Indian Breakfast">Indian Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Main Course">Main Course</option>
+                        <option value="North Indian Breakfast">North Indian Breakfast</option>
+                        <option value="One Pot Dish">One Pot Dish</option>
+                        <option value="Side Dish">Side Dish</option>
+                        <option value="Snack">Snack</option>
+                        <option value="World Breakfast">World Breakfast</option>
+                        <option value="South Indian Breakfast">South Indian Breakfast</option>
+                        <option value="Random">Random</option>
+                </select>
+            </div>
+    
+            <div class="mb-3">
+                <label for="cook-time" class="form-label">Rentang Waktu Masak</label>
+                <input type="text" name="time_range" required placeholder="Enter cooking time range">
+            </div>
+    
+            <button type="submit" class="btn btn-warning">Recommend Recipes</button>
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
